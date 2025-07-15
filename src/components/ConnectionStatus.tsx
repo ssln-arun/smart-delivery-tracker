@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Paper, Typography, Box } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../hooks'
 import { setStatus } from '../redux/slices/networkSlice';
 import SignalCellular4BarIcon from '@mui/icons-material/SignalCellular4Bar';
