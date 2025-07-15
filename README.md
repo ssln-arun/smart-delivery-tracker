@@ -1,69 +1,66 @@
-# React + TypeScript + Vite
+# Smart Delivery Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br>
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A real-time delivery location tracking application built with React, Vite, TypeScript, and Redux Toolkit. This app allows users (like delivery personnel) to track their current GPS location, view connectivity status, and sync location history even when offline using modern Web APIs.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Vite** Lightning-fast frontend tooling
+- **React + TypeScript**  Component-based structure with type safety  
+- **Redux Toolkit** State management for location and network 
+- **Material UI (MUI)** Modern responsive UI components 
+- **Geolocation API** Fetches live GPS coordinates 
+- **Network Information API** Monitors internet status and speed 
+- **Background Sync (Simulated)** Queues unsynced data while offline
+  
+## Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Live GPS Location Tracking**  
+  Automatically updates current latitude & longitude using browser geolocation.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Address Resolution**  
+  Converts coordinates to a human-readable address using reverse geocoding.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Offline Support**  
+  Stores unsynced locations while offline and syncs them when internet is back.
+
+- **Network Status Monitoring**  
+  Detects if the device is offline, online, or on a slow connection.
+
+- **Manual Sync Button**  
+  Allows users to manually sync stored locations to the backend (simulated).
+
+- **Low Accuracy Detection**  
+  Warns users if GPS accuracy is too low (e.g., indoors).
+
+- **Fully Responsive UI**  
+  Mobile-first layout using Material UI — ideal for real-world delivery agents.
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/ssln-arun/smart-delivery-tracker.git
+cd smart-delivery-tracker
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Running the App
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Open http://localhost:3000 in your browser.
+
+## Usage
+
+- <strong>Track Live Location:</strong> Automatically updates and displays your location.
+- <strong>Sync Locations:</strong> If offline, points are queued. Click “Sync” when back online.
+- <strong>Refresh Button:</strong> “Refresh Location” to force an update.
+- <strong>Check Address:</strong> Location is shown as both coordinates and a real address.
+- <strong>Connectivity Alerts:</strong> See if you're on a slow or disconnected network.
