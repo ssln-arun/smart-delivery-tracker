@@ -44,12 +44,12 @@ A real-time delivery location tracking application built with React, Vite, TypeS
 ## Project Preview
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e10b3fda-558f-4e6d-992f-c6d2f990fa27" alt="Screenshot 1" width="45%" />
-  <img src="https://github.com/user-attachments/assets/99454749-0d90-4f1d-bb9e-9822f51c033e" alt="Screenshot 2" width="45%" />
+  <img src="https://github.com/user-attachments/assets/e7b47ce9-fc0b-4935-ae8e-2cf241ea8409" alt="Screenshot 1" width="45%" />
+  <img src="https://github.com/user-attachments/assets/74078e63-d698-41b4-8073-2520401208c7" alt="Screenshot 2" width="45%" />
 </p>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/50869162-a429-40fc-93ff-f947548fb7d2" alt="Screenshot 3" width="45%" />
-  <img src="https://github.com/user-attachments/assets/129ce411-d768-45aa-8f2a-a460d4d08853" alt="Screenshot 4" width="45%" />
+  <img src="https://github.com/user-attachments/assets/9856a74d-d39a-4fe8-9db5-2979b29b622e" alt="Screenshot 3" width="45%" />
+  <img src="https://github.com/user-attachments/assets/df91aca6-58de-4ff7-a7c7-b2e53c00fdce" alt="Screenshot 4" width="45%" />
 </p>
 
 ## Installation
